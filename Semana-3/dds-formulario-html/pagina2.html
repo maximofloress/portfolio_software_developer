@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Other page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/page2.html" aria-current="page">Other page</a>
+    </nav>
+    <main>
+      <h1>My other page</h1>
+      <form id="formularioAfiliacion" action="#" method="post">
+        <!-- Nombre -->
+        <label for="nombre">Apellido y Nombre</label>
+        <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+        <!-- Contraseña -->
+        <label for="contrasena">Contraseña:</label>
+        <input
+          type="password"
+          id="contrasena"
+          name="contrasena"
+          minlength="8"
+          required
+        /><br /><br />
+
+        <!-- Edad -->
+        <label for="edad">Edad:</label>
+        <input
+          type="number"
+          id="edad"
+          name="edad"
+          min="18"
+          max="100"
+          required
+        /><br /><br />
+
+        <!-- Fecha de Nacimiento -->
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input
+          type="date"
+          id="fecha_nacimiento"
+          name="fecha_nacimiento"
+          required
+        /><br /><br />
+
+        <!-- Género -->
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero" required>
+          <option value="">Seleccione</option>
+          <option value="masculino">Masculino</option>
+          <option value="femenino">Femenino</option>
+          <option value="otro">Otro</option></select
+        ><br /><br />
+
+        <!-- Deportes -->
+        <label>Deportes:</label><br />
+        <input type="checkbox" id="futbol" name="deporte" value="futbol" />
+        <label for="futbol">Fútbol</label><br />
+        <input type="checkbox" id="basket" name="deporte" value="basket" />
+        <label for="basket">basket</label><br />
+        <input type="checkbox" id="tenis" name="deporte" value="tenis" />
+        <label for="tenis">Tenis</label><br /><br />
+
+        <!-- Nivel de Experiencia -->
+        <label for="experiencia">Nivel de Experiencia:</label><br />
+        <input
+          type="radio"
+          id="novato"
+          name="experiencia"
+          value="principiante"
+          checked
+        />
+        <label for="principiante">Principiante</label><br />
+        <input
+          type="radio"
+          id="intermedio"
+          name="experiencia"
+          value="intermedio"
+        />
+        <label for="intermedio">Intermedio</label><br />
+        <input type="radio" id="experto" name="experiencia" value="experto" />
+        <label for="experto">Experto</label><br /><br />
+
+        <!-- Comentario -->
+        <label for="comentario">Comentario:</label><br />
+        <textarea
+          id="comentario"
+          name="comentario"
+          rows="4"
+          cols="50"
+          required
+        ></textarea
+        ><br /><br />
+
+        <!-- Botón de Enviar -->
+        <button type="submit">Enviar</button>
+
+        <!-- Botón de Mostrar Datos -->
+        <button type="button" onclick="mostrarDatos()">Mostrar Datos</button>
+      </form>
+    </main>
+  </body>
+</html>
