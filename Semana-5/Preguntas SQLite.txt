@@ -1,0 +1,21 @@
+Material completo en material adicional de la semana 5, link del drive en un txt
+
+1) Que es SQLite?
+2) Como lo instalo?
+3) como visualizo una BD SQLite en VCode?
+4) Como instalo sqlite con Node?
+
+Ver Videos Guia Base de Datos
+1er Encuentro - Instalacion de SQLite
+2do Encuentro - Creacion de BD con sqlite
+3ro Encuentro - Creacion de tabla con sqlite
+4to Encuentro - Herramienta administrativa de DB Browser
+5to Encuentro - Comando SELECT
+    --> SELECT; FROM; WHERE ...
+    --> Operadores de comparacion "LIKE" 
+    --> Operadores de pertenencia
+    --> "%" en Operadores es "Lo que venga"
+7mo Encuentro - DELETE
+    --> Borrado "Logico" y "Fisico"
+8vo Encuentro - Modelo de Datos
+
