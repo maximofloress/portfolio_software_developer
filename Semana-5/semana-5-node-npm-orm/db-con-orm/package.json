@@ -1,0 +1,9 @@
+{
+    "name": "mi-primer-orm",
+    "dependencies": {
+        "sqlite": "5.1.1",
+        "sequelize": "6.37.3",
+        "sqlite3": "5.1.7"
+    },
+    "devDependencies": {}
+}
