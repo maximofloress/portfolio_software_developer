@@ -17,5 +17,6 @@ async function getAll(){
 ( async () => {
         await initDB()
         console.log('Base de Datos Inicializada')
-    } 
-)
+        await getAll()
+    })()
+

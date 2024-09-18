@@ -2,19 +2,20 @@ const { Sequelize } = require("sequelize");
 const { clasificacionAtributos, clasificacionOptions } = require("./clasificacion");
 const { peliculasAtributos, peliculasOptions } = require("./peliculas");
 
-
+// para mandar la direccion al archivo de la base de datos es "storage", "database" define el nombre no la direccion
 const sequelize = new Sequelize({
     dialect: 'sqlite',
-    database: '../tabla.db'
+    storage: './tabla'
 })
 
 // en data guardamos la configuracion una vez creada la conexion a base de datos
 const initDB = async () => {
-    const seq = await sequelize.sync()
-    seq.define('clasificaciones', clasificacionAtributos, clasificacionOptions)
-    seq.define('peliculas', peliculasAtributos, peliculasOptions)
+    sequelize.define('clasificaciones', clasificacionAtributos, clasificacionOptions)
+    sequelize.define('peliculas', peliculasAtributos, peliculasOptions)
     // belongTo("modelo al cual referencia la FK" , "la columna a la que hace referencia la FK dentro del modelo referenciado")
-    seq.models.peliculas.belongsTo(seq.models.clasificaciones,{foreignKey: 'IdClasificacion'})
+    sequelize.models.peliculas.belongsTo(sequelize.models.clasificaciones,{foreignKey: 'IdClasificacion'})
+    await sequelize.sync()
+    console.log()
 }
 
 module.exports = {
