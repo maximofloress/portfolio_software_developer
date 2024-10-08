@@ -1,0 +1,12 @@
+Objetivo: Crear una aplicación backend con una interface WebApiRest,  programada en NodeJs/Javascript, usando el framework express y con acceso a una base de datos (sqlite) mediante un ORM (Sequelize)
+Version final del proyecto: https://labsys.frc.utn.edu.ar/dds-backend-2024/
+Version final del proyecto con frontend funcionando: https://labsys.frc.utn.edu.ar/dds-frontend-2024/
+Requisitos tener instalado:
+Visual studio Code
+Node.js
+
+PASO A PASO BACKEND
+https://docs.google.com/document/d/1wRDK5BS_0QF5f9IhjU_0v3HqHG2jup0ycUpFscYMwro/edit
+
+PASO A PASO FRONTEND
+https://docs.google.com/document/d/1j4rtUy2qrXAIh1MKjyhz2d71icKT1LzQAuDYRSGNQqY/edit#heading=h.gw85bpgp7r7t
