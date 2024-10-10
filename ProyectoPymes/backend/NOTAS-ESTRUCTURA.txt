@@ -1,0 +1,11 @@
+PASO 3
+    - Mediante el "sql-init.js" Definimos y Creamos el archivo base de datos "pymes.db"
+    - En "sql-init.js" creamos la funcion CrearBaseDatosNoExistente() la cual crea las tablas y inserta los registros de la BD mediante sentencias sql
+    - En el index.js require("./base-orm/sqlite-init");  // crear base si no existe
+    - Creamos el archivo "sequelize-init.js" para definir el modelo de datos en objetos mediante el ORM (Object relational mapping) sequelize
+    - Creamos el router para la entidad "articulosfamilias.js" el cual se encargara de manejar todas las peticiones a articulosfamilias
+        + Hacemos uso del modelo en objetos de la bd con el ORM, nuestro "sequelize-init.js" -> const db = require("../base-orm/sequelize-init");
+        + en el index -> const articulosfamiliasRouter = require("./routes/articulosfamilias"); app.use(articulosfamiliasRouter);
+PASO 4
+    - implementamos el router para la entidad "articulos", el cual debe permitir CRUD (create, read, update, delete)
+    
