@@ -31,7 +31,7 @@ Paso 3
     - Metodos para los model con sequelize
         -> model.findAll({ 
         **  where: {   // condicion a cumplir -> IMPORTAR Op -> const { Op } = require('sequelize');
-                [Op.like]: `${req.query.titulo}%`
+                ATRIBUTO: { [Op.like]: `${req.query.titulo}%` }
             }
         **  attributes: [  // que atributos debe traer de la tabla
                 "IdArticuloFamilia", 
@@ -65,7 +65,7 @@ Paso 4
 
 PASO 1
     - Importar BOOTSTRAP 
-    - Importar los cripts 
+    - Importar los scripts AL FINAL PARA EVITAR ERRORES
 
 PASO 2
     - Codigo de SCRIPT
@@ -78,7 +78,7 @@ PASO 2
             document.getElementById("lista-libros");
         * recorrer el json con 
             forEach( (item) => { 
-            //  crear un registro de tabla con 
+            //  crear un registro de tabla entre `` con: 
                 <tr>  
                     <td>item.atributo</td>  
                 </tr>
