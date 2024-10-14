@@ -8,11 +8,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.0",
-    "sequelize": "^6.37.3",
+    "express": "^4.21.1",
+    "sequelize": "^6.37.4",
     "sqlite3": "^5.1.7"
-  },
-  "description": ""
+  }
 }

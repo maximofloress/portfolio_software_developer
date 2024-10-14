@@ -56,4 +56,3 @@ const cargarLibros = async () => {
       await cargarFiltrados(tituloIngresado)
   })
   
-  

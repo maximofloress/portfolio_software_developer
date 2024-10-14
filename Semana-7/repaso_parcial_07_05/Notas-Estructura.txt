@@ -1,0 +1,68 @@
+================ BACKEND ================
+Paso 1
+    - Instalar dependencias para el backend
+        + sqlite3
+        + sequelize
+        + express
+    - Creacion de carpeta src
+        + models
+            * Implementa el modelado de las entidades en la Base de Datos con el ORM sequelize 
+        + service
+            * Implementa el manejo de peticiones a la entidad (CRUD), mediante el model con sequelize
+
+Paso 2
+    - Modelado de entidades
+        + require o import {Sequelize, DataTypes} de sequelize
+        + crear un nuevo orm con Sequelize("sqlite:" + "ruta al archivo base de datos")
+            -> En estos casos la bd esta definida en memoria por lo que la ruta es 'sqlite::memory:'
+        + defino el modelo con el sequelize.define( 'nombreTabla', {atributos} )
+        + exportar modulos 
+            -> module.exports = {
+                sequelize,
+                articulos,
+            };
+
+Paso 3
+    - implementacion del router
+    - require o import express
+    - creamos el router con const router = express.Router();
+    - require o import del modelo de entidades sequelize (ORM)
+    - Utilizar async con bloques try catch
+    - Metodos para los model con sequelize
+        -> model.findAll({ 
+        **  where: {   // condicion a cumplir -> IMPORTAR Op -> const { Op } = require('sequelize');
+                [Op.like]: `${req.query.titulo}%`
+            }
+        **  attributes: [  // que atributos debe traer de la tabla
+                "IdArticuloFamilia", 
+                "Nombre"
+            ]
+        })
+    - Siempre retornar la respuesta como json
+        -> return res.json(libros);
+    - hacer el bloque catch que responda con el error
+        -> catch (err) {
+        res.status(500).send({message: "Error al recuperar los libros"})
+        }
+    - exportar router
+        -> module.exports = router;
+    
+
+Paso 4
+    - Desarrollar servidor
+        + importar express 
+        + importar los routers
+        + crear const app = express()
+            -> importar CORS despues de crear la app, app.use(cors());
+            -> usar express.json()
+            -> usar los routers
+        + DESPUES de inicialBaseDeDatos(), INICIALIZAMOS el Servidor
+            -> inicializarBaseDeDatos().then(() => {
+                app.listen(3000, () => console.log('Servidor escuchando en el puerto 3000'))
+            });
+
+================ FRONTEND ================
+
+PASO 1
+    - Importar BOOTSTRAP 
+    - Importar los cripts 

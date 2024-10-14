@@ -1,26 +1,18 @@
-
-const { Sequelize, DataTypes, Op } = require('sequelize');
-const sequelize = new Sequelize('sqlite::memory:');
-const express = require('express');
+const express = require('express')
 const cors = require('cors');
-const museoModel = require('./src/models/museo.js')
+const libroRouter = require('./src/routes/libroRouter')
+const { Libro, sequelize } = require('./src/models/libro');
 
 const app = express();
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
+app.use(libroRouter)
 
 
-const Libro = sequelize.define('Libro', museoModel.museoAtributos)
-
-// const Libro = sequelize.define('Libro', {
-//     titulo: DataTypes.STRING,
-//     autor: DataTypes.STRING,
-//     genero: DataTypes.STRING,
-//     año_publicacion: DataTypes.INTEGER,
-//     editorial: DataTypes.STRING
-// })
-
-
+// const sequelize = new Sequelize({
+//     dialect: 'sqlite',
+//     storage: ':memory:'
+// });
 
 async function inicializarBaseDeDatos() {
     await sequelize.sync({ force: true });
@@ -38,33 +30,12 @@ async function inicializarBaseDeDatos() {
     ]);
 }
 
-
-// implementar la funcion getLibros del service de libros "libros.service.js"
-app.get('/api/libros', async (req, res) => {
-    try{
-        if(req.query.titulo) {
-            const libros = await Libro.findAll({
-                where: {
-                    titulo: { [Op.like]: `${req.query.titulo}%`}
-                }
-            });
-            return res.json(libros);
-        }
-
-        const libros = await Libro.findAll();
-        res.json(libros);
-
-    } catch (err) {
-
-        res.status(500).send({message: "Error al recuperar los libros"})
-
-    }
+//desarrolle su servidor backend aqui
+app.get("/", (req, res) => {
+    res.send("Servidor backend corriendo")
 })
 
-
-app.listen(3000, async ()=>{
-    await inicializarBaseDeDatos()
-    console.log("Servidor iniciado en el puerto 3000");
-});
-
-
+inicializarBaseDeDatos().then( () => {
+        app.listen(3000, () => {console.log('Servidor corriendo puerto 3000')})
+    }
+)
