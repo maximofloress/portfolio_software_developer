@@ -49,9 +49,9 @@ const cargarLibros = async () => {
   }
   
   cargarLibros();
+
   const btnFiltrar = document.getElementById('btnFiltrar');
   btnFiltrar.addEventListener('click', async function (event) {
-      // console.log('click event', event)
       const tituloIngresado = document.getElementById('titulo').value.trim();
       await cargarFiltrados(tituloIngresado)
   })

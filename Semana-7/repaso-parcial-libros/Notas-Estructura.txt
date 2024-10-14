@@ -66,3 +66,31 @@ Paso 4
 PASO 1
     - Importar BOOTSTRAP 
     - Importar los cripts 
+
+PASO 2
+    - Codigo de SCRIPT
+    - Funcion para cargarDatos en una tabla 
+        * funcion async, usar try catch 
+        * hacer el fetch, y despues pasar a json con await. 
+            await fetch("http://localhost:3000/api/libros");
+            await response.json();
+        * obtener el cuerpo de la tabla por id
+            document.getElementById("lista-libros");
+        * recorrer el json con 
+            forEach( (item) => { 
+            //  crear un registro de tabla con 
+                <tr>  
+                    <td>item.atributo</td>  
+                </tr>
+            // agregar al cuerpo de la tabla obtenido por id 
+                listaLibros.innerHTML += row;   
+            } )
+    - al final del script ejecutar la funcion cargarDatos
+    
+PASO 3
+    - Hacer el Listener de eventos para el boton
+    - recuperar el boton por id, y hacer un btn.addEventListener( 'evento', ()=>{} )
+    - el evento es 'click', y la fucnion debe ser async
+    - en la funcion recuperar el titulo del input con 
+        * document.getElementById('titulo').value.trim();
+        * ejecutar la fucnion cargarFiltrados(titulo)
