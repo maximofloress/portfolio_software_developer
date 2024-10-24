@@ -12,10 +12,11 @@ export default function ConsultarPelicula() {
             setRows(peliculas);
         };
         fetchPeliculas();
-    }, [])
+    }, 
+    [])
 
-    const onConsultar = async (filtros) => {
-        const peliculas = await peliculasService.getPeliculas(filtros)
+    const onConsultar = async (titulo) => {
+        const peliculas = await peliculasService.getPeliculas(titulo)
         setRows(peliculas);
     }
 

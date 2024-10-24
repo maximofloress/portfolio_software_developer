@@ -14,14 +14,14 @@ const getAll = async () => {
     return peliculas.data
 }
 
+const getByFilters = async (filtros) => {
+    const resultado = await axios.get(`http://localhost:3000/api/peliculas?titulo=${filtros.titulo}`)
+    return resultado.data
+}
+
 const post = async (pelicula) => {
     const result = await axios.post(urlPelicula, pelicula)
     return result.data
-}
-
-const getByFilters = async (filtros) => {
-    const resultado = await axios.get(`http://localhost:3000/api/peliculas`, filtros)
-    return resultado.data
 }
 
 const peliculasService = {

@@ -16,11 +16,9 @@ export const initDB = async () => {
         clasificacionesModel.clasifiacionAtributos,clasificacionesModel.clasificacionesOptions
     )
     sequelize.define('peliculas',
-
         peliculasModel.atributos,
         peliculasModel.opciones
     )
-
     sequelize.models.peliculas.belongsTo(sequelize.models.clasificaciones, {
         foreignKey: 'IdClasificacion'
     })

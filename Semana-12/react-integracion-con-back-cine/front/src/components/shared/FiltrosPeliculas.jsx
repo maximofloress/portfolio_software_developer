@@ -4,7 +4,11 @@ export default function FiltrosPeliculas({onConsultarPeliculas}) {
     const [pelicula, setPelicula] = useState('') 
 
     const onFiltrarClick = () => {
+        if (!pelicula) {
+            onConsultarPeliculas()
+        } else {
         onConsultarPeliculas({titulo: pelicula})
+        }
     }
 
     return (
