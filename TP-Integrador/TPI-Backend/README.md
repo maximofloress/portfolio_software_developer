@@ -21,14 +21,12 @@ Este proyecto es una aplicación backend para la gestión de una librería. La a
 - **ID_libro**: Identificador del libro.
 - **Cantidad**: Cantidad de libros en el pedido.
 
-
 ### Libros
 - **ID_libro**: Identificador único del libro.
 - **Título**: Título del libro.
 - **Autor**: Autor del libro.
-- **Género**: Género del libro.
 - **Precio**: Precio del libro.
-- **FechaRegistro**: Fecha en la que se registro.
+- **FechaPublicacion**: Fecha en la que se registro.
 
 ### Autores
 - **ID_autor**: Identificador único del autor.
@@ -48,8 +46,7 @@ Este proyecto es una aplicación backend para la gestión de una librería. La a
 - **Nombre**: Nombre de la editorial.
 - **País**: País de origen de la editorial.
 - **Categoria**: Categoria a la cual pertenece la editorial
-- **AñoFundación**: Año de fundación de la editorial.
-
+- **fechaFundación**: Año de fundación de la editorial.
 
 ## Tecnologías Utilizadas
 
