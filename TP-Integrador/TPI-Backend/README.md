@@ -2,15 +2,14 @@
 
 ## Introducción
 
-Este proyecto es una aplicación backend para la gestión de una librería. La aplicación está desarrollada utilizando Node.js, Express y SQLite. A continuación, se describen las tablas y sus campos correspondientes que forman parte del dominio de la librería.
+Este proyecto es una aplicación backend para la gestión de una librería. La aplicación está desarrollada utilizando Node.js, Express y SQLite. A continuación, se describen las tablas, sus campos correspondientes asi como el diagrama de entidad-relacion que forma parte del dominio de la librería.
 
 ## Tablas
 
 ### Clientes
-- **ID_cliente**: Identificador único del cliente.
+- **ID**: Identificador único del cliente.
 - **Nombre**: Nombre del cliente.
 - **Apellido**: Apellido del cliente.
-- **Dirección**: Dirección del cliente.
 - **Correo**: Correo electrónico del cliente.
 - **FechaNacimiento**: Fecha de nacimiento del cliente 
 
@@ -24,7 +23,7 @@ Este proyecto es una aplicación backend para la gestión de una librería. La a
 ### Libros
 - **ID_libro**: Identificador único del libro.
 - **Título**: Título del libro.
-- **Autor**: Autor del libro.
+- **ID_Autor**: Autor del libro.
 - **Precio**: Precio del libro.
 - **FechaPublicacion**: Fecha en la que se registro.
 
@@ -33,7 +32,6 @@ Este proyecto es una aplicación backend para la gestión de una librería. La a
 - **Nombre**: Nombre del autor.
 - **Nacionalidad**: Nacionalidad del autor.
 - **FechaNacimiento**: Fecha de nacimiento del autor.
-
 
 ### Categorias
 - **ID_categoria**: Identificador único de la categoría.
@@ -47,6 +45,14 @@ Este proyecto es una aplicación backend para la gestión de una librería. La a
 - **País**: País de origen de la editorial.
 - **Categoria**: Categoria a la cual pertenece la editorial
 - **fechaFundación**: Año de fundación de la editorial.
+
+
+## Diagrama Entidad-Relación
+
+Diagrama entidad-relación (DER) del dominio de la librería:
+
+![Diagrama Entidad-Relación](DER%20TPI%20DDS.png)
+
 
 ## Tecnologías Utilizadas
 
@@ -77,3 +83,9 @@ Este proyecto es una aplicación backend para la gestión de una librería. La a
     ```
 2. La aplicación estará disponible en `http://localhost:3000`.
 
+## Test
+
+1. Inicia todos los test:
+    ```bash
+    npm test
+    ```
