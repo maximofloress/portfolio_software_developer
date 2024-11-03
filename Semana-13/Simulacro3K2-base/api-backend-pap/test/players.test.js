@@ -23,7 +23,7 @@ describe('players', () => {
         const filtroLocal = 'flacroutzir@youku.com';
         const response = await api.get(`/api/players/${filtroLocal}`);
 
-        expect(response.body[0].fullName).toBe('Felizio Lacroutz');
+        expect(response.body[0].full_name).toBe('Felizio Lacroutz');
     });
 
     test('of getPlayersByTextFilter returning no object', async () => {

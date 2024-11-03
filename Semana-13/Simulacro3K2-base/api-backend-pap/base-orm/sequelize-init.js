@@ -1,6 +1,6 @@
 // configurar ORM sequelize
 const { Sequelize, DataTypes } = require("sequelize");
-const sequelize = new Sequelize("sqlite:" + process.env.base);
+const sequelize = new Sequelize("sqlite:" + "./.data/databaseFile.db");
 
 // Definicion del modelo Player
 const Player = sequelize.define("Player", {
@@ -33,6 +33,9 @@ const Player = sequelize.define("Player", {
     type: DataTypes.STRING,
     allowNull: false
   },
+},{
+  tableName: "players",
+  timestamps: false
 });
   
 

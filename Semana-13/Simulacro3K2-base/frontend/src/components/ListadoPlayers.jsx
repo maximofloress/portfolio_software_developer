@@ -20,15 +20,19 @@ const ListadoPlayers = ({ lista }) => {
           </tr>
         </thead>
         <tbody>
-          <tr key={'0'}>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>  
+          {lista && lista.map((item, index) => {
+            return (
+              <tr key={'player-' + index}>
+                <td><img src={item.avatar} alt={`Avatar of ${item.full_name}`} width="50" height="50" /></td>
+                <td>{item.id}</td>
+                <td>{item.full_name}</td>
+                <td>{item.email}</td>
+                <td>{item.nickname}</td>
+                <td>{item.age}</td>
+                <td>{item.ip_address}</td>
+              </tr>
+            )
+          })}
         </tbody>
       </table>
     </div>
