@@ -9,9 +9,7 @@
     - Duración (mins)
 
 ## Colección postman de API 
-```
-https://api.postman.com/collections/1880332-616c0526-fe84-4c51-aa91-f40d30d657c7?access_key=PMAT-01JAVY6JGJMTMQYMGCCA41RQ1G
-```
+
 
 ## Material
 - Bootstrap con react -> https://react-bootstrap.netlify.app/docs/components/navbar/#pricing

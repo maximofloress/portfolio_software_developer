@@ -8,8 +8,6 @@ Copien el contenido en sus portafolios. Recuerden no copiar la carpeta oculta `.
 ## Colección de Postman
 > Recuerden que esto también lo pueden ver desde las `dev tools` del navegador
 
-Link para importar al postman: https://api.postman.com/collections/1880332-dd78c890-199a-4cf1-bd8d-e6ee469b4c74?access_key=PMAT-01JBE11R426B6ND39BVQJQM6Q0
-
 ## Simulacro
 > Los de las imagenes sonde ejemplo. Pueden usar el estilo y base de proyecto que deseen. Dejo [aquí](https://labsys.frc.utn.edu.ar/gitlab/desarrollo-de-software1/materiales/ejercicios/react-integracion-con-back-cine/-/tree/en-clases?ref_type=heads) un ejemplo visto
 1. Crear frontend
